@@ -9,7 +9,8 @@ class Dishdetail extends Component {
         }
         const cmnts = comments.map(comment => {
             return (
-                <li key={comment.id}>
+                <div class='container'>
+                <div key={comment.id}>
                     <p>{comment.comment}</p>
                     <p>-- {comment.author},
                     &nbsp;
@@ -19,7 +20,8 @@ class Dishdetail extends Component {
                             day: '2-digit'
                         }).format(new Date(comment.date))}
                     </p>
-                </li>
+                </div>
+                </div>
             )
         })
         return (
@@ -68,4 +70,4 @@ class Dishdetail extends Component {
     }
 }
 
-export default Dishdetail
+export default Dishdetail;
